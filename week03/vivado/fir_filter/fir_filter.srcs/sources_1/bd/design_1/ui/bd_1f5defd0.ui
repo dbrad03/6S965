@@ -1,0 +1,93 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.660542",
+   "Default View_TopLeft":"309,-899",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 8 -x 2730 -y -590 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2730 -y 40 -defaultsOSRD
+preplace port port-id_hdmi_in_clk_p -pg 1 -lvl 0 -x -320 -y -650 -defaultsOSRD
+preplace port port-id_hdmi_in_clk_n -pg 1 -lvl 0 -x -320 -y -630 -defaultsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x -320 -y -530 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_p -pg 1 -lvl 8 -x 2730 -y -190 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_n -pg 1 -lvl 8 -x 2730 -y -170 -defaultsOSRD
+preplace port port-id_hdmi_in_ddc_scl_io -pg 1 -lvl 8 -x 2730 -y -690 -defaultsOSRD
+preplace port port-id_hdmi_in_ddc_sda_io -pg 1 -lvl 8 -x 2730 -y -660 -defaultsOSRD
+preplace portBus hdmi_in_data_p -pg 1 -lvl 0 -x -320 -y -610 -defaultsOSRD
+preplace portBus hdmi_in_data_n -pg 1 -lvl 0 -x -320 -y -590 -defaultsOSRD
+preplace portBus btns -pg 1 -lvl 0 -x -320 -y -170 -defaultsOSRD
+preplace portBus hdmi_out_data_p -pg 1 -lvl 8 -x 2730 -y -110 -defaultsOSRD
+preplace portBus hdmi_out_data_n -pg 1 -lvl 8 -x 2730 -y -90 -defaultsOSRD
+preplace portBus hdmi_in_hpd -pg 1 -lvl 8 -x 2730 -y -550 -defaultsOSRD
+preplace portBus hdmi_out_hpd -pg 1 -lvl 8 -x 2730 -y -530 -defaultsOSRD
+preplace portBus leds -pg 1 -lvl 8 -x 2730 -y -630 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 170 -y 10 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 610 -y -160 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 4 -x 1270 -y 110 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 4 -x 1270 -y -560 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 7 -x 2520 -y -120 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 610 -y -490 -defaultsOSRD
+preplace inst tristate_scl -pg 1 -lvl 5 -x 1660 -y -600 -defaultsOSRD
+preplace inst tristate_sda -pg 1 -lvl 5 -x 1660 -y -440 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 7 -x 2520 -y -540 -defaultsOSRD
+preplace inst ilconstant_1 -pg 1 -lvl 2 -x 610 -y -380 -defaultsOSRD
+preplace inst fir_wrapper_0 -pg 1 -lvl 6 -x 2120 -y -210 -defaultsOSRD
+preplace inst fir_interface_0 -pg 1 -lvl 5 -x 1660 -y 50 -defaultsOSRD
+preplace inst xpm_cdc_gen_0 -pg 1 -lvl 6 -x 2120 -y -680 -defaultsOSRD
+preplace inst xpm_cdc_gen_1 -pg 1 -lvl 6 -x 2120 -y -860 -defaultsOSRD
+preplace inst xpm_cdc_gen_2 -pg 1 -lvl 6 -x 2120 -y 10 -defaultsOSRD
+preplace inst xpm_cdc_gen_3 -pg 1 -lvl 6 -x 2120 -y 150 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 6 -x 2120 -y -520 -defaultsOSRD
+preplace netloc Net 1 5 3 1820 -770 2340 -690 NJ
+preplace netloc Net1 1 5 3 1860J -760 2330 -680 2680
+preplace netloc Net2 1 4 3 1430 -370 1840 240 2310
+preplace netloc btns_1 1 0 6 NJ -170 360J -260 NJ -260 N -260 NJ -260 1810
+preplace netloc clk_wiz_0_clk_out1 1 2 2 780 -530 N
+preplace netloc dvi2rgb_0_SCL_O 1 4 1 1480 -610n
+preplace netloc dvi2rgb_0_SCL_T 1 4 1 1490 -590n
+preplace netloc dvi2rgb_0_SDA_O 1 4 1 1490 -500n
+preplace netloc dvi2rgb_0_SDA_T 1 4 1 1460 -480n
+preplace netloc dvi2rgb_0_vid_pData 1 4 2 1430J -690 1870
+preplace netloc dvi2rgb_0_vid_pHSync 1 4 2 1460J -670 1900
+preplace netloc dvi2rgb_0_vid_pVDE 1 4 2 1440J -710 1910
+preplace netloc dvi2rgb_0_vid_pVSync 1 4 2 1450J -700 1830
+preplace netloc fir_interface_0_coeffs 1 5 1 1830 20n
+preplace netloc fir_interface_0_color_select 1 5 1 1890 -660n
+preplace netloc fir_interface_0_ob 1 5 1 1850 -840n
+preplace netloc fir_interface_0_scaler 1 5 1 1810 60n
+preplace netloc fir_wrapper_0_hsync_out 1 6 1 2340 -240n
+preplace netloc fir_wrapper_0_pixel_out 1 6 1 2310 -180n
+preplace netloc fir_wrapper_0_vde_out 1 6 1 2300 -200n
+preplace netloc fir_wrapper_0_vsync_out 1 6 1 2320 -220n
+preplace netloc hdmi_in_clk_n_1 1 0 4 NJ -630 NJ -630 N -630 950
+preplace netloc hdmi_in_clk_p_1 1 0 4 NJ -650 NJ -650 N -650 960
+preplace netloc hdmi_in_data_n_1 1 0 4 NJ -590 NJ -590 N -590 930
+preplace netloc hdmi_in_data_p_1 1 0 4 NJ -610 NJ -610 N -610 940
+preplace netloc ilconstant_0_dout 1 7 1 2700 -550n
+preplace netloc ilconstant_1_dout 1 2 5 N -380 1110 -360 N -360 1920 -390 2330
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 N -120 1080 30 1430
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 -10 -90 370 20 N 20 1110 20 1510 -50 1880
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 390 -180n
+preplace netloc rgb2dvi_0_TMDS_Clk_n 1 7 1 2690 -170n
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 7 1 2680 -190n
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 7 1 2690 -90n
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 7 1 2680 -110n
+preplace netloc sysclk_1 1 0 2 NJ -530 390
+preplace netloc tristate_0_o 1 4 2 1470 -680 1810
+preplace netloc tristate_sda_o 1 4 2 NJ -520 1810
+preplace netloc xpm_cdc_gen_0_dest_out 1 5 2 1950 -940 2290
+preplace netloc xpm_cdc_gen_1_dest_out 1 5 2 1930 -950 2280
+preplace netloc xpm_cdc_gen_2_dest_out 1 5 2 1960 -370 2280
+preplace netloc xpm_cdc_gen_3_dest_out 1 5 2 1940 -380 2290
+preplace netloc processing_system7_0_DDR 1 1 7 350 -780 N -780 N -780 N -780 N -780 N -780 2690
+preplace netloc processing_system7_0_FIXED_IO 1 1 7 380 -40 N -40 N -40 N -40 1820 230 2340 40 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 N 10 N 10 1090
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1460 30n
+levelinfo -pg 1 -320 170 610 910 1270 1660 2120 2520 2730
+pagesize -pg 1 -db -bbox -sgen -520 -1000 2940 740
+"
+}
+{
+   "da_ps7_cnt":"6"
+}
