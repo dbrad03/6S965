@@ -153,11 +153,12 @@ async def test_data_framer(dut):
     readonly = ReadOnly()
     burst_length = 65536
     debounce_cycles = 256
+    transactions = 0
 
     # inm = AXIS_Monitor(dut, 's00', dut.pixel_clk)
-    outm = AXIS_Monitor(dut, 'm00', dut.pixel_clk)
+    # outm = AXIS_Monitor(dut, 'm00', dut.pixel_clk)
     # ind = M_AXIS_Driver(dut, 's00', dut.pixel_clk)
-    outd = S_AXIS_Driver(dut, 'm00', dut.pixel_clk)
+    # outd = S_AXIS_Driver(dut, 'm00', dut.pixel_clk)
     
     # Start clock and reset
     cocotb.start_soon(Clock(dut.pixel_clk, 10, units="ns").start())
@@ -171,15 +172,33 @@ async def test_data_framer(dut):
     dut.trigger.value = 1
     await ClockCycles(dut.pixel_clk, debounce_cycles+4)
     dut.trigger.value = 0
+    await rising_edge
+    await ReadOnly()
     
-    for _ in range(115000):
+    # dut._log.info(f"transmitting: {dut.transmitting.value}")
+    assert int(dut.transmitting.value)==1
+    
+    for _ in range(180000):
         await falling_edge
-        dut.m00_axis_tready.value = random.randint(1,5) <= 3
-        dut.pixel_data = random.randint(0,2**24-1)
-        await rising_edg
+        ready = random.randint(1,5) <= 2
+        pixel_data = random.randint(0,2**24-1)
+        dut.m00_axis_tready.value = ready
+        dut.pixel_data.value = pixel_data
+        # dut._log.info(f"Setting: ready={ready}, pixel_data={pixel_data}")
+        await rising_edge
+        await ReadOnly()
+        # drive m_ready and pixel data and wait for rising edge for them to show up
+        valid = bool(dut.m00_axis_tvalid.value)
+        ready = bool(dut.m00_axis_tready.value)
+        if valid and ready: 
+            transactions = transactions+1
+            if transactions==65536:
+                dut._log.info(f"got tlast={int(dut.m00_axis_tlast.value)} after {transactions} handshakes")
+            else:
+                assert not int(dut.m00_axis_tlast.value)
     
-    assert 65536 == outm.transactions, \
-        f"Transaction count mismatch: in={inm.transactions}, out={outm.transactions}"
+    assert burst_length == transactions, \
+        f"Transaction count mismatch: expected={burst_length}, actual={transactions}"
     
     # assert sig_out_act == sig_out_exp, "Data mismatch between input and output stream"
     
