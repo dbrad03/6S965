@@ -40,10 +40,13 @@ module fir_wrapper(
     input wire [7:0] scaler,
     input wire [14:0][7:0] coeffs,
     input wire ob,
-    input wire [3:0] btns
+    
+    input wire [3:0] btns,
+    output wire trig
 
     );
-
+    assign trig = btns[0];
+    
     reg   hsync_pipe [2:0];
     reg   vsync_pipe [2:0];
     reg   vde_pipe [2:0];

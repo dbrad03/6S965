@@ -4,7 +4,7 @@
     "xci_name": "design_1_math_doer_0_0",
     "cell_name": "math_doer_0",
     "component_reference": "localdomain:user:math_doer:1.0",
-    "ip_revision": "3",
+    "ip_revision": "7",
     "gen_directory": "../../../../../../axis_dma.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_0",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "3" } ],
+        "IPREVISION": [ { "value": "7" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../axis_dma.gen/sources_1/bd/design_1/ip/design_1_math_doer_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

@@ -28,13 +28,13 @@ module fir_15
         end else begin
             if (data_in_valid) begin
 
-                buffer[0] <= data_in * coeffs[NUM_COEFFS-1];
+                buffer[0] <= data_in * $signed(coeffs[NUM_COEFFS-1]);
             
                 for (i = 1; i < NUM_COEFFS-1; i = i + 1) begin
-                    buffer[i] <= buffer[i-1] + (data_in * coeffs[NUM_COEFFS-1-i]);
+                    buffer[i] <= $signed(buffer[i-1]) + (data_in * $signed(coeffs[NUM_COEFFS-1-i]));
                 end
                 
-                data_out <= buffer[NUM_COEFFS-2] + (data_in * coeffs[0]);
+                data_out <= $signed(buffer[NUM_COEFFS-2]) + (data_in * $signed(coeffs[0]));
             end
             data_out_valid <= data_in_valid;
         end

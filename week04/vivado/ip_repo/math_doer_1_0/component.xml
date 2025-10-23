@@ -224,7 +224,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>15aa584a</spirit:value>
+            <spirit:value>0b2cc113</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -240,7 +240,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>15aa584a</spirit:value>
+            <spirit:value>0b2cc113</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -509,25 +509,25 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/math_doer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_0bfbdf65</spirit:userFileType>
+        <spirit:name>src/axis_fir_15.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_79b2a4c6</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/j_math.sv</spirit:name>
-        <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8404b98b</spirit:userFileType>
+        <spirit:name>hdl/math_doer.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_52988488</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/math_doer.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:name>src/axis_fir_15.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/j_math.sv</spirit:name>
-        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:name>hdl/math_doer.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -595,13 +595,13 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>math_doer_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-20T17:46:27Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-21T21:56:19Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f0de1866"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="838b1031"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6494d137"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a3f5a067"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="db1eed89"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="827748aa"/>

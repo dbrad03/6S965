@@ -46,21 +46,29 @@
   //passthrough calculator-type device that handles AXIS spec on its own
   //either by being simple (the 3*x+10000 thing) or by designing it into
   //the the module (the FIR15 filter hopefully)
+  reg [119:0] coeffs; //([14:0][7:0])
+   always @(*)begin
+        coeffs = {  -8'sd2, -8'sd3, -8'sd4, 8'sd0, 8'sd9, 8'sd21, 8'sd32, 8'sd36,
+                    8'sd32, 8'sd21, 8'sd9, 8'sd0, -8'sd4, -8'sd3, -8'sd2};
+   end
  
-  j_math (  .s00_axis_aclk(s00_axis_aclk),
-            .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s00_axis_tready),
-            .s00_axis_tdata(s00_axis_tdata),
-            .s00_axis_tstrb(s00_axis_tstrb),
-            .s00_axis_tlast(s00_axis_tlast),
-            .s00_axis_tvalid(s00_axis_tvalid),
+  axis_fir_15 (
+        .s00_axis_aclk(s00_axis_aclk),
+        .s00_axis_aresetn(s00_axis_aresetn),
+        .s00_axis_tready(s00_axis_tready),
+        .s00_axis_tdata(s00_axis_tdata),
+        .s00_axis_tstrb(s00_axis_tstrb),
+        .s00_axis_tlast(s00_axis_tlast),
+        .s00_axis_tvalid(s00_axis_tvalid),
  
-            .m00_axis_aclk(m00_axis_aclk),
-            .m00_axis_aresetn(m00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready),
-            .m00_axis_tdata(m00_axis_tdata),
-            .m00_axis_tstrb(m00_axis_tstrb),
-            .m00_axis_tlast(m00_axis_tlast),
-            .m00_axis_tvalid(m00_axis_tvalid)
-        );
+        .coeffs(coeffs),
+ 
+        .m00_axis_aclk(m00_axis_aclk),
+        .m00_axis_aresetn(m00_axis_aresetn),
+        .m00_axis_tready(m00_axis_tready),
+        .m00_axis_tdata(m00_axis_tdata),
+        .m00_axis_tstrb(m00_axis_tstrb),
+        .m00_axis_tlast(m00_axis_tlast),
+        .m00_axis_tvalid(m00_axis_tvalid)
+    );
 	endmodule
