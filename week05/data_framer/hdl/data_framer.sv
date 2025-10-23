@@ -16,14 +16,13 @@ module data_framer #
  
     //You want to send up TLAST-framed bursts of data that are 2**16 in length
     //update and test this module to make sure that's happening.
-
     logic trigger_sync [1:0];
     logic [7:0] debounce_cycles = 8'h0;
     logic trigger_debounced = 1'b0;
 
     logic [15:0] samples     = 16'h0;
     logic        transmitting    = 1'b0;
-    // logic        transmitting = 1'b0;
+
     wire  handshake;
 
     assign handshake = transmitting && m00_axis_tready;
