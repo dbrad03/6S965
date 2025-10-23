@@ -1,0 +1,52 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.886836",
+   "Default View_TopLeft":"-303,-1513",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port sysref_in -pg 1 -lvl 0 -x -770 -y -1090 -defaultsOSRD
+preplace port adc2_clk -pg 1 -lvl 0 -x -770 -y -1060 -defaultsOSRD
+preplace port vin2_01 -pg 1 -lvl 0 -x -770 -y -1030 -defaultsOSRD
+preplace portBus sw -pg 1 -lvl 0 -x -770 -y -1600 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 10 -x 2950 -y -1600 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 6 -x 1450 -y -1270 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 4 -x 570 -y -1260 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 8 -x 2400 -y -980 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -570 -y -910 -defaultsOSRD
+preplace inst iq_framerV2_0 -pg 1 -lvl 9 -x 2770 -y -750 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 110 -y -950 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 5 -x 970 -y -1270 -defaultsOSRD
+preplace inst smartconnect_1 -pg 1 -lvl 7 -x 2000 -y -1260 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x -290 -y -750 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 3 -x 110 -y -750 -defaultsOSRD
+preplace netloc usp_rf_data_converter_0_clk_adc2 1 0 9 -660 -1130 N -1130 N -1130 N -1130 N -1130 N -1130 N -1130 N -1130 2570
+preplace netloc clk_wiz_0_clk_out1 1 1 8 -480J -910 -110J -1100 NJ -1100 NJ -1100 NJ -1100 NJ -1100 2200J -1150 2620
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 2 6 -80 -1170 380 -1360 830J -1350 1140J -1150 1760 -1150 2150
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 6 -470 -850 -110J -850 NJ -850 NJ -850 NJ -850 1750
+preplace netloc sw_1 1 0 9 N -1600 NJ -1600 NJ -1600 NJ -1600 NJ -1600 NJ -1600 NJ -1600 NJ -1600 2610J
+preplace netloc iq_framerV2_0_probe 1 9 1 2930 -1600n
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 3 5 400 -1140 820 -1140 N -1140 1860 -1140 2160
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 7 -90 -1050 N -1050 N -1050 N -1050 N -1050 2220 -1140 2580
+preplace netloc usp_rf_data_converter_0_m20_axis 1 8 1 2600 -1070n
+preplace netloc usp_rf_data_converter_0_m21_axis 1 8 1 2590 -990n
+preplace netloc iq_framerV2_0_M00_AXIS 1 2 8 -70 -1160 NJ -1160 NJ -1160 NJ -1160 NJ -1160 NJ -1160 NJ -1160 2920
+preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 390 -1280n
+preplace netloc sysref_in_1 1 0 8 NJ -1090 NJ -1090 NJ -1090 NJ -1090 NJ -1090 NJ -1090 NJ -1090 2170J
+preplace netloc adc2_clk_1 1 0 8 NJ -1060 NJ -1060 NJ -1060 NJ -1060 NJ -1060 NJ -1060 NJ -1060 2210J
+preplace netloc vin2_01_1 1 0 8 NJ -1030 NJ -1030 -100J -1040 NJ -1040 NJ -1040 NJ -1040 NJ -1040 2140J
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 6 1 1750 -1300n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 6 1 1750 -1280n
+preplace netloc smartconnect_0_M00_AXI 1 5 1 1150 -1320n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 740 -1290n
+preplace netloc smartconnect_1_M01_AXI 1 7 1 2230 -1250n
+preplace netloc smartconnect_1_M00_AXI 1 3 5 400 -1380 NJ -1380 NJ -1380 NJ -1380 2150
+levelinfo -pg 1 -770 -570 -290 110 570 970 1450 2000 2400 2770 2950
+pagesize -pg 1 -db -bbox -sgen -880 -1900 3160 180
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_rf_converter_usp_cnt":"1",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}
